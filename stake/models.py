@@ -11,6 +11,7 @@ from django.core.validators import MinValueValidator
 class Chain(models.Model):
     id = models.UUIDField(default=uuid4(), editable=False, primary_key=True)
     name = models.CharField(max_length=255, null=True)
+    slug = AutoSlugField(populate_from='name', always_update=True, null=True)
     symbol = models.CharField(max_length=255, null=True)
     logo = models.ImageField(default='no-image.png', null=True)
     created = models.DateField(auto_now_add=True)

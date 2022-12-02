@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'stake.middleware.AuthorizedOriginMiddleware',
+    # 'stake.middleware.AuthorizedOriginMiddleware',
 ]
 
 ROOT_URLCONF = 'metastake.urls'
